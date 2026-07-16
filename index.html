@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="description" content="MarketLens AI — evidence-first market intelligence demo." />
+  <title>MarketLens AI — Evidence-first market intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">M</div>
+        <div>
+          <strong>MarketLens</strong>
+          <span>AI research workspace</span>
+        </div>
+      </div>
+
+      <div class="demo-callout">
+        <span class="status-dot"></span>
+        <div><strong>Demo mode</strong><span>Synthetic data only</span></div>
+      </div>
+
+      <nav class="nav-list" id="nav-list">
+        <button class="nav-item active" data-view="brief" type="button"><span class="nav-icon">◈</span><span>Daily brief</span></button>
+        <button class="nav-item" data-view="portfolio" type="button"><span class="nav-icon">◫</span><span>Portfolio fit</span></button>
+        <button class="nav-item" data-view="evidence" type="button"><span class="nav-icon">◎</span><span>Evidence</span><span class="nav-count">12</span></button>
+        <button class="nav-item" data-view="thesis" type="button"><span class="nav-icon">⌁</span><span>Thesis watch</span></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><span class="mini-spark">✦</span><p>From market noise to evidence-backed decisions.</p></div>
+        <button class="profile-button" type="button"><span class="avatar">HZ</span><span><strong>Demo investor</strong><small>Read-only workspace</small></span><span class="chevron">⌄</span></button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Workspace</span><span>/</span><strong id="breadcrumb-label">Daily brief</strong></div>
+        <div class="topbar-actions"><button class="icon-button" type="button" aria-label="Search">⌕</button><button class="icon-button" type="button" aria-label="Notifications">♧</button><button class="export-button" type="button" id="export-button">Export brief <span>↗</span></button></div>
+      </header>
+
+      <section class="content-wrap" id="app-content">
+        <div class="page-heading">
+          <div><p class="eyebrow">Wednesday · July 16, 2026</p><h1 id="page-title">Your market brief</h1><p class="lede" id="page-lede">A prioritized view of what changed, why it matters, and what to monitor next.</p></div>
+          <div class="freshness"><span class="freshness-dot"></span><span>Snapshot captured 08:10 ET</span><button class="text-button" type="button" id="refresh-button">Refresh</button></div>
+        </div>
+
+        <div class="kpi-grid" aria-label="Market overview">
+          <article class="kpi-card"><div class="kpi-label">Market regime <span class="info">i</span></div><div class="kpi-value">Mixed</div><div class="kpi-meta"><span class="trend amber">↗</span> Rotation under way</div></article>
+          <article class="kpi-card"><div class="kpi-label">Portfolio relevance <span class="info">i</span></div><div class="kpi-value">5 linked</div><div class="kpi-meta"><span class="trend cyan">●</span> Across 3 holdings</div></article>
+          <article class="kpi-card"><div class="kpi-label">Evidence coverage <span class="info">i</span></div><div class="kpi-value">12 items</div><div class="kpi-meta"><span class="trend green">✓</span> 9 primary sources</div></article>
+          <article class="kpi-card"><div class="kpi-label">Brief confidence <span class="info">i</span></div><div class="kpi-value">Medium</div><div class="confidence-bar"><span></span><span></span><span></span><span class="empty"></span><span class="empty"></span></div></article>
+        </div>
+
+        <div class="main-grid">
+          <section class="panel brief-panel">
+            <div class="panel-heading"><div><span class="panel-kicker">01 · What changed</span><h2>Rates are pulling attention back to quality.</h2></div><span class="confidence-pill medium">Medium confidence</span></div>
+            <p class="summary">The morning signal is not a single headline. It is the interaction between a firmer rates path, narrower index leadership, and a watchlist that is becoming more sensitive to valuation.</p>
+            <div class="signal-row"><div class="signal-icon cyan-bg">↗</div><div><strong>Market breadth is narrowing</strong><p>Large-cap technology is still carrying the index, while participation beneath the surface is cooling.</p></div><span class="signal-tag">Portfolio-linked</span></div>
+            <div class="signal-row"><div class="signal-icon amber-bg">!</div><div><strong>Valuation sensitivity is rising</strong><p>Higher discount rates make the next earnings update more important than the last price move.</p></div><span class="signal-tag amber-tag">Monitor</span></div>
+            <div class="brief-footer"><span><span class="source-mark">◉</span> 12 evidence items</span><span><span class="source-mark">◌</span> Updated 4 min ago</span><button class="link-button" type="button" data-view-target="evidence">Review evidence →</button></div>
+          </section>
+
+          <section class="panel chart-panel">
+            <div class="panel-heading compact"><div><span class="panel-kicker">02 · Market pulse</span><h2>Index snapshot</h2></div><button class="period-button" type="button">1D⌄</button></div>
+            <div class="chart-legend"><span><i class="legend-dot cyan-dot"></i> S&amp;P 500 <strong>+0.42%</strong></span><span><i class="legend-dot amber-dot"></i> Nasdaq <strong>+0.71%</strong></span></div>
+            <div class="chart-wrap"><svg viewBox="0 0 520 220" role="img" aria-label="Synthetic index snapshot chart"><defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#63e2f8" stop-opacity=".24"/><stop offset="1" stop-color="#63e2f8" stop-opacity="0"/></linearGradient></defs><path class="grid-line" d="M0 35H520M0 90H520M0 145H520M0 200H520"/><path class="fill-path" d="M0 174 C40 166 50 182 78 156 S126 146 146 151 S190 122 213 136 S247 94 273 111 S312 103 334 118 S368 86 398 100 S425 68 451 76 S487 50 520 55 V220 H0Z"/><path class="line-path cyan-line" d="M0 174 C40 166 50 182 78 156 S126 146 146 151 S190 122 213 136 S247 94 273 111 S312 103 334 118 S368 86 398 100 S425 68 451 76 S487 50 520 55"/><path class="line-path amber-line" d="M0 186 C32 180 55 175 80 180 S126 164 148 169 S188 149 218 154 S258 128 281 139 S322 123 345 132 S375 111 398 118 S430 93 458 102 S490 89 520 92"/></svg></div>
+            <div class="chart-axis"><span>09:30</span><span>12:00</span><span>15:00</span><span>16:00</span></div>
+          </section>
+        </div>
+
+        <div class="lower-grid">
+          <section class="panel relevance-panel"><div class="panel-heading compact"><div><span class="panel-kicker">03 · Why it matters to you</span><h2>Portfolio fit</h2></div><button class="link-button" type="button" data-view-target="portfolio">Open view →</button></div><div class="holding-list"><div class="holding-row"><span class="ticker nvda">NV</span><div class="holding-copy"><strong>NVDA</strong><span>Rates sensitivity · high</span></div><span class="holding-impact negative">Watch</span></div><div class="holding-row"><span class="ticker msft">MS</span><div class="holding-copy"><strong>MSFT</strong><span>Quality offset · medium</span></div><span class="holding-impact positive">Resilient</span></div><div class="holding-row"><span class="ticker qqq">Q</span><div class="holding-copy"><strong>QQQ</strong><span>Index concentration · high</span></div><span class="holding-impact neutral">Linked</span></div></div></section>
+          <section class="panel invalidation-panel"><div class="panel-heading compact"><div><span class="panel-kicker">04 · Challenge the thesis</span><h2>What would change my mind?</h2></div><span class="watch-pill">2 watch items</span></div><div class="watch-item"><span class="watch-marker">1</span><div><strong>Rates stop moving higher</strong><p>Would reduce the valuation pressure flagged in today's brief.</p></div><span class="watch-state">Open</span></div><div class="watch-item"><span class="watch-marker">2</span><div><strong>Leadership broadens</strong><p>Would weaken the concentration risk in the current market read.</p></div><span class="watch-state">Open</span></div></section>
+        </div>
+
+        <footer class="disclaimer"><span>◈</span><p><strong>Research workspace, not financial advice.</strong> Demo values are synthetic. A score is not a buy signal; scenarios include assumptions, risks, and invalidation conditions.</p></footer>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
